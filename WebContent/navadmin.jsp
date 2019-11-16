@@ -9,7 +9,7 @@
 <style type="text/css">
 body { 
 
-	/* background-image: url("top-banner.jpg"); 
+	 background-image: url("top-banner.jpg"); 
  */
 }
 .button {
@@ -118,7 +118,7 @@ if(session.getAttribute("username")==null)
 	</div>
   <div align="center">
   <form action="AptiApplication/BookApplication.jsp">
-   <button class="button button7" style="width:350px">Quantitative Aptitude</button>
+   <button class="button button2" style="width:350px">Quantitative Aptitude</button>
 	</form>  
 	</div>
 	<div align="center">
@@ -126,9 +126,11 @@ if(session.getAttribute("username")==null)
    <button class="button button4" style="width:350px">GATE Previous Year Papers</button>
 	</form>  
 	</div>
-    <form action="AdminLibApplication/LibApplication.jsp">
-   <button class="button button4" style="width:350px">GATE Preparation</button>
+	<div align="center">
+    <form action="CSEPreparation/BookApplication.jsp">
+   <button class="button button4" style="width:350px">IAS EXAM PREP</button>
 	</form> 
+	</div>
 </div>
 </body>
 </html>

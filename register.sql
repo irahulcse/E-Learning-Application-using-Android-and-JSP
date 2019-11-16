@@ -2,3 +2,4 @@
 
 
 	insert into register values(1,'rahul',12,20,'rahul','rahul');
+	insert into register values(2,'rakesh',12,20,'rakesh','rakesh');

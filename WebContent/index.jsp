@@ -120,11 +120,11 @@ body {
    <form action="Login" method="post" style="width:300px">
   <div class="form-group">
     <label for="email1" style="color:white;">Student Roll No(12 Digit No)</label>
-    <input type="text" class="form-control" name="username"  placeholder="Student Username"/>
+    <input type="text" class="form-control" name="username"  placeholder="Student Username"/ required>
   </div>
   <div class="form-group">
     <label for="password1" style="color:white;">Student Password</label>	
-    <input type="password" class="form-control" name="password" placeholder="Student Password"/>
+    <input type="password" class="form-control" name="password" placeholder="Student Password"/ required>
   </div>  
   <div class="form-group">
   </div>
@@ -169,26 +169,27 @@ body {
 <div class="col-md-6">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <h3 style="color:white;;"><b>New Student Registration Form</b></h3>
-  <form action="AddStudent/AddStudent.jsp" method="post" style="width:300px">
+  <form action="AddStudent/AddStudent.jsp" method="post" style="width:300px" required>
   <div class="form-group">
     <label for="email1" style="color:white;">New Student Name</label>
-    <input type="text" class="form-control" name="name"  placeholder="Student Name"/>
+    <input type="text" class="form-control" name="name"  placeholder="Student Name"/ required>
   </div>
   <div class="form-group">
     <label for="email1" style="color:white;">Student Class</label>
-    <input type="text" class="form-control" name="class"  placeholder="Student Class"/>
+    <input type="number"  min="1" max="12" class="form-control" name="class"  placeholder="Student Class"/ required>
   </div>
   <div class="form-group">
     <label for="email1" style="color:white;">Student Age</label>
-    <input type="text" class="form-control" name="age"  placeholder="Student Age"/>
+    <input type="number"  min="1" max="18" class="form-control" name="age"  placeholder="Student Age"/ required>
   </div>
   <div class="form-group">
     <label for="password1" style="color:white;;">Student Username</label>
-    <input type="text" class="form-control" name="username" placeholder="Student Username"/>
+    <input type="text" class="form-control" name="username" placeholder="Student Username"/ required>
   </div>
   <div class="form-group">
     <label for="password1" style="color:white;;">Student Password</label>
-    <input type="password" class="form-control" name="password" placeholder="Student Password"/>
+    <!-- <input type="password" id="psw" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> -->
+    <input type="password" class="form-control" name="password" placeholder="Student Password"/ required>
   </div> 
   <button type="submit" class="btn btn-primary">Register Me!</button>
 </form>

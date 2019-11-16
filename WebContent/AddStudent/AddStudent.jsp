@@ -11,7 +11,7 @@
     try
     {
     Class.forName("com.mysql.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "rahul", "pass");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "root", "");
     Statement st=conn.createStatement();
     int i=st.executeUpdate("insert into register(name,class,age,username,password) values('"+name+"','"+clas+"','"+age+"','"+username+"','"+password+"')");
     response.setContentType("text/html");

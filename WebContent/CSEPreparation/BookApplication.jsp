@@ -64,17 +64,12 @@ if(session.getAttribute("username")==null)
 }
 %>
 <jsp:include page="navheader.jsp" />
-<br>
-
-
-
 <jsp:include page="navfooter.jsp" />
-<br><br>
 <form method="post" name="form"  class="form-inline">
 <div class='container'>
-<h2 align="center"><strong>APTITUDE BOOKS FOR COMPETITIVE EXAMINATION</strong></h2>
+<h2 align="center"><strong>CIVIL SERVICE EXAMINATION  PREVIOUS YEAR PAPERS</strong></h2>
 <table class='table table-bordered table-striped' border="1" style="margin-left:auto;margin-right:auto;">
-<tr><th>BOOK NO</th><th>BOOK NAME</th><th >AUTHOR</th></tr>
+<tr><th>SUBJECT NAME</th><th>LAST REFRESHED DATE</th></tr>
 <%
 Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
@@ -87,7 +82,7 @@ Statement st;
 try{
 Class.forName(driver);
 con = DriverManager.getConnection(url+db,userName,password);
-String query = "select * from aptibook where bdeleted='n'";
+String query = "select * from civil where bdeleted='n'";
 st = con.createStatement();
 ResultSet rs = st.executeQuery(query);
 %>
@@ -95,8 +90,7 @@ ResultSet rs = st.executeQuery(query);
 while(rs.next()){
 %>
 <tr><td><%=rs.getString(2)%></td>
-<td><%=rs.getString(3)%></td>
-<td><%=rs.getString(4)%></td>
+<td><%=rs.getString(5)%></td>
 <script>
 function confirmComplete(id) {
 	var answer=confirm("Are you sure you want to delete the book permanently?");
@@ -110,8 +104,7 @@ function confirmComplete(id) {
 	  }
 }
 </script>
-<td><input type="button"  name="edit" value="QUESTION PAPER" style="background-color:green;font-weight:bold;color:white;"onclick="window.location.href='<%=rs.getString(5)%>'"></td>
-<td><input type="button" name="edit" value="ANSWER KEY" style="background-color:red;font-weight:bold;color:white;"onclick="window.location.href='<%=rs.getString(6)%>'"></td>
+<td><input type="button" name="edit" value="QUESTION PAPER" style="background-color:green;font-weight:bold;color:white;"onclick="window.location.href='<%=rs.getString(3)%>'"></td>
 <tr>
 <%
 }

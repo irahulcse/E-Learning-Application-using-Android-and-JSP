@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
 		{
 		Class.forName("com.mysql.jdbc.Driver");
 		String sql = "SELECT * FROM register where username='"+username+"' and password='"+password+"'";
-		Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "rahul", "pass");
+		Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "root", "");
 		Statement st=conn.createStatement();
 		ResultSet rs = st.executeQuery(sql);
 

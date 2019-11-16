@@ -70,8 +70,8 @@ if(session.getAttribute("username")==null)
 &nbsp;&nbsp;<button id="myBtn" class="btn" style="float:right">ADD BOOKS</button>
 </div>
 <div style="float: right; width: 160px">
-<form name="TrainerMenu" action="/HelloJSP/export/exportBook.jsp" method="post" onsubmit="greeting()">
-<button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportBook.jsp')">&nbsp;&nbsp;DOWNLOAD AS CSV</button>
+<form name="TrainerMenu" action="/Smart_Kids/export/exportMain.jsp" method="post" onsubmit="greeting()">
+<button id="myBtn" class="btn"  style="float:right" onclick="openPage('exportMain.jsp')">&nbsp;&nbsp;DOWNLOAD AS CSV</button>
 </form>
 </div>
 </div>
@@ -87,14 +87,14 @@ if(session.getAttribute("username")==null)
  <div class="container">
 <div class="row">
 <div class="col-sm-8">
-<form action="AddBookCheck.jsp" method="post" style="width:300px">
+<form action="" method="post" style="width:300px">
 <div class="form-group">
 <label for="name1">BOOK ID</label>
 <%
 int count=0;
 try {
 Class.forName("com.mysql.jdbc.Driver");
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "rahul", "pass");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/smart", "root", "");
 String query = "select * from books ORDER BY id DESC LIMIT 1";
 Statement st = conn.createStatement();
 ResultSet rs = st.executeQuery(query);
@@ -189,8 +189,8 @@ Connection con = null;
 String url = "jdbc:mysql://localhost:3306/";
 String db = "smart";
 String driver = "com.mysql.jdbc.Driver";
-String userName ="rahul";
-String password="pass";
+String userName ="root";
+String password="";
 
 Statement st;
 try{
